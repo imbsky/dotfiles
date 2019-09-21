@@ -1,0 +1,24 @@
+name: Main workflow
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macOS-latest]
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Run setup script
+        run: bash ./etc/setup.sh
+
+      - name: Run configure script
+        run: bash ./etc/macos/configure.sh
+
+      - name: Install the dotfiles
+        run: env RCRC=$GITHUB_WORKSPACE/rcrc rcup
