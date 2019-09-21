@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source $HOME/src/github.com/imbsky/dotfiles/etc/utils.sh
+source "$PWD/etc/utils.sh"
 
 function install_or_update_brew() {
   function brew_bundle() {
@@ -17,6 +17,15 @@ function install_or_update_brew() {
       /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" >/dev/null || fail "Could not install brew"
       brew_bundle
     fi
+  fi
+}
+
+function install_fish() {
+  if [ ! $(echo $SHELL) == $(which fish) ]; then
+    echo "/usr/local/bin/fish" >>/etc/shells
+    chsh -s /usr/local/bin/fish
+  else
+    warn "Fish is already set as your default shell!"
   fi
 }
 
@@ -62,12 +71,13 @@ function install_or_update_nanorc() {
 
 function setup() {
   if is_macos; then
-    echo -e "🏃 Setting up my \e[34mmacOS\e[m environment..."
+    echo -e "🏃 Setting up your \e[34mmacOS\e[m environment..."
     install_or_update_brew
+    install_fish
     install_or_update_fisher
     install_or_update_nanorc
   else
-    echo -e "🏃 Setting up my \e[33mLinux\e[m environment..."
+    echo -e "🏃 Setting up your \e[33mLinux\e[m environment..."
     echo "🚧 WIP!"
   fi
   echo "🏁 Done!"

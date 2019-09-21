@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source $HOME/src/github.com/imbsky/dotfiles/etc/utils.sh
+source "$PWD/etc/utils.sh"
 
 function configure_macos() {
   (
