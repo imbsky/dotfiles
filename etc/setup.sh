@@ -8,7 +8,7 @@ function is_macos() {
   elif [[ "$OSTYPE" == "linux"* ]]; then
     false
   else
-    fail "Unsupported platform"
+    fail "Unsupported platform..."
   fi
 }
 
