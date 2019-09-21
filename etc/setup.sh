@@ -35,12 +35,20 @@ function install_or_update_fisher() {
     echo "🚧 Downloading fisher..."
     curl --silent --location --create-dirs --output "$HOME/.config/fish/functions/fisher.fish" "https://git.io/fisher" || fail "Could not download fisher"
     echo "🚧 Installing fisher packages..."
-    fisher add matchai/spacefish >/dev/null || fail "Could not install 'matchai/spacefish'"
-    fisher add decors/fish-ghq >/dev/null || fail "Could not install 'decors/fish-ghq'"
-    fisher add oh-my-fish/plugin-peco >/dev/null || fail "Could not install 'oh-my-fish/plugin-peco'"
+    (
+      fish <<EOF
+        fisher add matchai/spacefish >/dev/null
+        fisher add decors/fish-ghq >/dev/null
+        fisher add oh-my-fish/plugin-peco >/dev/null
+EOF
+    ) || fail "Could not install fisher packages"
   else
     echo "🚧 Update all fisher packages"
-    fisher >/dev/null || fail "Could not update fisher packages!"
+    (
+      fish <<EOF
+        fisher >/dev/null
+EOF
+    ) || fail "Could not update fisher packages!"
   fi
 }
 
