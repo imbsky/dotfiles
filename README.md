@@ -6,7 +6,7 @@ My dotfiles
 
 🚧 Work in Progress
 
-# Initial setup (macOS)
+## Initial setup (macOS)
 
 ```bash
 # Clone this repository
@@ -22,7 +22,7 @@ bash $HOME/src/github.com/imbsky/dotfiles/etc/macos/configure.sh
 env RCRC=$HOME/src/github.com/imbsky/dotfiles/rcrc rcup
 ```
 
-# Update configuration
+## Update configuration
 
 ```bash
 # Change directory to this repository's directory
@@ -38,7 +38,7 @@ bash $HOME/src/github.com/imbsky/dotfiles/etc/setup.sh
 env RCRC=$HOME/src/github.com/imbsky/dotfiles/rcrc rcup
 ```
 
-# Uninstall the dotfiles
+## Uninstall the dotfiles
 
 ```bash
 # Uninstall the dotfiles
