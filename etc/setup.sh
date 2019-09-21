@@ -2,16 +2,6 @@
 
 source $HOME/src/github.com/imbsky/dotfiles/etc/utils.sh
 
-function is_macos() {
-  if [[ "$OSTYPE" == "darwin"* ]]; then
-    true
-  elif [[ "$OSTYPE" == "linux"* ]]; then
-    false
-  else
-    fail "Unsupported platform..."
-  fi
-}
-
 function install_or_update_brew() {
   function brew_bundle() {
     echo "🚧 Installing brew stuff..."

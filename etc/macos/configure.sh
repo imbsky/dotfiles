@@ -184,4 +184,6 @@ function configure_macos() {
   ) || fail "Could not configure my macOS"
 }
 
-configure_macos
+if is_macos; then
+  configure_macos
+fi
