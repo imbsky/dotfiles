@@ -1,0 +1,2 @@
+EXCLUDES=".editorconfig README.md LICENSE"
+DOTFILES_DIRS="$HOME/src/github.com/imbsky/dotfiles"
