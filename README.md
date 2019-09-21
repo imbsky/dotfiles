@@ -5,3 +5,11 @@ My dotfiles
 <hr />
 
 🚧 Work in Progress
+
+# Installation
+
+```bash
+git clone https://github.com/imbsky/dotfiles ~/src/github.com/imbsky/dotfiles
+bash ~/src/github.com/imbsky/dotfiles/etc/setup.sh
+env RCRC=$HOME/src/github.com/imbsky/dotfiles/rcrc rcup
+```
