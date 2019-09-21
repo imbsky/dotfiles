@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source ./utils.sh
+source $HOME/src/github.com/imbsky/dotfiles/etc/utils.sh
 
 function is_macos() {
   if [[ "$OSTYPE" == "darwin"* ]]; then
