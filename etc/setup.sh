@@ -22,8 +22,8 @@ function install_or_update_brew() {
 
 function install_fish() {
   if [ ! $(echo $SHELL) == $(which fish) ]; then
-    echo "/usr/local/bin/fish" >>/etc/shells
-    chsh -s /usr/local/bin/fish
+    sudo echo "/usr/local/bin/fish" >>/etc/shells
+    sudo chsh -s /usr/local/bin/fish
   else
     warn "Fish is already set as your default shell!"
   fi
@@ -70,6 +70,16 @@ function install_or_update_nanorc() {
 }
 
 function setup() {
+  # Ask for the administrator password upfront
+  sudo -v || fail "Could not get the administrator password!"
+
+  # Keep-alive: update existing `sudo` time stamp until this script has finished
+  while true; do
+    sudo -n true
+    sleep 600
+    kill -0 "$$" || exit
+  done 2>/dev/null &
+
   if is_macos; then
     echo -e "🏃 Setting up your \e[34mmacOS\e[m environment..."
     install_or_update_brew
