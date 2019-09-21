@@ -31,7 +31,7 @@ function install_or_update_brew() {
 }
 
 function install_or_update_fisher() {
-  if [ -d "$HOME/.config/fish/completions/fisher.fish" ]; then
+  if [ -d "$HOME/.config/fish/functions/fisher.fish" ]; then
     echo "🚧 Downloading fisher..."
     curl --silent --location --create-dirs --output "$HOME/.config/fish/functions/fisher.fish" "https://git.io/fisher" || fail "Could not download fisher"
     echo "🚧 Installing fisher packages..."
