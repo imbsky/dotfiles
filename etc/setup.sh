@@ -1,13 +1,6 @@
 #!/usr/bin/env bash
 
-function warn() {
-  echo -e "\e[33mWarn:\e[m $* 😱"
-}
-
-function fail() {
-  echo -e "\e[31mFail:\e[m $* 😭"
-  exit 1
-}
+source ./utils.sh
 
 function is_macos() {
   if [[ "$OSTYPE" == "darwin"* ]]; then
@@ -24,7 +17,7 @@ function install_brew() {
 
   function brew_bundle() {
     echo "🚧 Installing brew stuff..."
-    brew bundle install --file="$HOME/src/github.com/imbsky/dotfiles/etc/homebrew/Brewfile" >/dev/null || fail "Could not install brew stuff"
+    brew bundle install --file="$HOME/src/github.com/imbsky/dotfiles/etc/homebrew/Brewfile" >/dev/null || fail "Could not install brew stuff!"
   }
 
   if is_macos; then
@@ -33,7 +26,7 @@ function install_brew() {
       brew_bundle
     else
       echo "🚧 Installing brew..."
-      /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" >/dev/null || fail "Could not install brew"
+      /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" >/dev/null || fail "Could not install brew!"
       brew_bundle
     fi
   fi
