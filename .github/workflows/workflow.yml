@@ -21,4 +21,6 @@ jobs:
         run: bash ./etc/macos/configure.sh
 
       - name: Install the dotfiles
-        run: env RCRC=$GITHUB_WORKSPACE/rcrc rcup
+        env:
+          RCRC: $GITHUB_WORKSPACE/rcrc
+        run: rcup
