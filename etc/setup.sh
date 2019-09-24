@@ -8,7 +8,7 @@ function install_or_update_brew() {
     brew bundle install --file="$HOME/src/github.com/imbsky/dotfiles/etc/homebrew/Brewfile" >/dev/null || fail "Could not install brew stuff"
   }
 
-  if is_macos; then
+  if [ is_macos ]; then
     if [ -x "$(type -p brew)" ]; then
       warn "Brew is already installed!"
       brew_bundle
@@ -21,7 +21,7 @@ function install_or_update_brew() {
 }
 
 function install_fish() {
-  if [ ! $(echo $SHELL) == $(which fish) ]; then
+  if [ $(echo $SHELL) != $(which fish) ]; then
     sudo echo "/usr/local/bin/fish" >>/etc/shells
     sudo chsh -s /usr/local/bin/fish
   else
@@ -80,7 +80,7 @@ function setup() {
     kill -0 "$$" || exit
   done 2>/dev/null &
 
-  if is_macos; then
+  if [ is_macos ]; then
     echo -e "🏃 Setting up your \e[34mmacOS\e[m environment..."
     install_or_update_brew
     install_fish
