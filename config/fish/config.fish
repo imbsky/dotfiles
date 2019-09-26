@@ -1,6 +1,6 @@
 set -x PATH /usr/local/sbin $PATH
 
-source ~/.asdf/asdf.fish
+source /usr/local/opt/asdf/asdf.fish
 
 set GHQ_SELECTOR peco
 

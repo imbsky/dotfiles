@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source "$PWD/etc/utils.sh"
+source "$HOME/src/github.com/imbsky/dotfiles/etc/utils.sh"
 
 function brewBundleDump() {
   echo "Running brew bundle dump..."

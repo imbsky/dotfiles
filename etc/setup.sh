@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source "$PWD/etc/utils.sh"
+source "$HOME/src/github.com/imbsky/dotfiles/etc/utils.sh"
 
 function install_or_update_brew() {
   function brew_bundle() {
@@ -42,12 +42,21 @@ function install_or_update_fisher() {
 EOF
     ) || fail "Could not install fisher packages"
   else
-    echo "🚧 Update all fisher packages"
+    echo "🚧 Updating all fisher packages..."
     (
       fish <<EOF
         fisher >/dev/null
 EOF
     ) || fail "Could not update fisher packages!"
+  fi
+}
+
+function install_asdf() {
+  if [ -d "/usr/local/opt/asdf" ]; then
+    echo "🚧 Installing asdf..."
+    brew install asdf >/dev/null || fail "Could not download asdf"
+  else
+    warn "asdf is already installed!"
   fi
 }
 
@@ -83,6 +92,7 @@ function setup() {
   if [ is_macos ]; then
     echo -e "🏃 Setting up your \e[34mmacOS\e[m environment..."
     install_or_update_brew
+    install_asdf
     install_fish
     install_or_update_fisher
     install_or_update_nanorc
@@ -90,7 +100,7 @@ function setup() {
     echo -e "🏃 Setting up your \e[33mLinux\e[m environment..."
     echo "🚧 WIP!"
   fi
-  echo "🏁 Done!"
+  warn "🏁 Done. Note that some of these changes require a logout/restart to take effect!"
 }
 
 setup
