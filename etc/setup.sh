@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-REPOSITORY_DIRECTORY=$(dirname $(dirname "${0}"))
-
 function warn() {
   echo -e "\e[33mWarn:\e[m $* 😱"
 }
@@ -22,19 +20,12 @@ function is_macos() {
 }
 
 function install_or_update_brew() {
-  function brew_bundle() {
-    echo "🚧 Installing brew stuff..."
-    brew bundle install --file="$REPOSITORY_DIRECTORY/etc/homebrew/Brewfile" >/dev/null || fail "Could not install brew stuff"
-  }
-
   if [ is_macos ]; then
     if [ -x "$(type -p brew)" ]; then
       warn "Brew is already installed!"
-      brew_bundle
     else
       echo "🚧 Installing brew..."
       /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" >/dev/null || fail "Could not install brew"
-      brew_bundle
     fi
   fi
 }
