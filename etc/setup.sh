@@ -32,9 +32,9 @@ function install_or_update_brew() {
 
 function install_fish() {
   if [ $(echo $SHELL) == $(which bash) ]; then
-    brew install fish
+    brew install fish >/dev/null
     echo "/usr/local/bin/fish" | sudo tee -a /etc/shells >/dev/null
-    sudo chsh -s /usr/local/bin/fish
+    sudo chsh -s /usr/local/bin/fish >/dev/null
   else
     warn "Fish is already set as your default shell!"
   fi
@@ -51,14 +51,14 @@ function install_or_update_fisher() {
         fisher add decors/fish-ghq >/dev/null
         fisher add oh-my-fish/plugin-peco >/dev/null
 EOF
-    ) || fail "Could not install fisher packages"
+    ) >/dev/null || fail "Could not install fisher packages"
   else
     echo "🚧 Updating all fisher packages..."
     (
       fish <<EOF
-        fisher >/dev/null
+        fisher
 EOF
-    ) || fail "Could not update fisher packages!"
+    ) >/dev/null || fail "Could not update fisher packages!"
   fi
 }
 
