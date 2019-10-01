@@ -41,7 +41,14 @@ function install_fish() {
 }
 
 function install_or_update_fisher() {
-  if [ -f "$HOME/.config/fish/functions/fisher.fish" ]; then
+  if [ -x "$(type -p fisher)" ]; then
+    echo "🚧 Updating all fisher packages..."
+    (
+      fish <<EOF
+        fisher
+EOF
+    ) >/dev/null || fail "Could not update fisher packages!"
+  else
     echo "🚧 Downloading fisher..."
     curl --silent --location --create-dirs --output "$HOME/.config/fish/functions/fisher.fish" "https://git.io/fisher" || fail "Could not download fisher"
     echo "🚧 Installing fisher packages..."
@@ -52,22 +59,15 @@ function install_or_update_fisher() {
         fisher add oh-my-fish/plugin-peco >/dev/null
 EOF
     ) >/dev/null || fail "Could not install fisher packages"
-  else
-    echo "🚧 Updating all fisher packages..."
-    (
-      fish <<EOF
-        fisher
-EOF
-    ) >/dev/null || fail "Could not update fisher packages!"
   fi
 }
 
 function install_asdf() {
-  if [ -d "/usr/local/opt/asdf" ]; then
+  if [ -x "$(type -p asdf)" ]; then
+    warn "asdf is already installed!"
+  else
     echo "🚧 Installing asdf..."
     brew install asdf >/dev/null || fail "Could not download asdf"
-  else
-    warn "asdf is already installed!"
   fi
 }
 
