@@ -32,7 +32,7 @@ function install_or_update_brew() {
 
 function install_fish() {
   if [ $(echo $SHELL) == $(which bash) ]; then
-    sudo echo "/usr/local/bin/fish" >>/etc/shells
+    echo "/usr/local/bin/fish" | sudo tee -a /etc/shells >/dev/null
     sudo chsh -s /usr/local/bin/fish
   else
     warn "Fish is already set as your default shell!"
