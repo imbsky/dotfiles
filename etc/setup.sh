@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+REPOSITORY_DIRECTORY=$(dirname $(dirname "${0}"))
+
 function warn() {
   echo -e "\e[33mWarn:\e[m $* 😱"
 }
@@ -22,7 +24,7 @@ function is_macos() {
 function install_or_update_brew() {
   function brew_bundle() {
     echo "🚧 Installing brew stuff..."
-    brew bundle install --file="$HOME/src/github.com/imbsky/dotfiles/etc/homebrew/Brewfile" >/dev/null || fail "Could not install brew stuff"
+    brew bundle install --file="$REPOSITORY_DIRECTORY/etc/homebrew/Brewfile" >/dev/null || fail "Could not install brew stuff"
   }
 
   if [ is_macos ]; then
