@@ -1,6 +1,23 @@
 #!/usr/bin/env bash
 
-source "$HOME/src/github.com/imbsky/dotfiles/etc/utils.sh"
+function warn() {
+  echo -e "\e[33mWarn:\e[m $* 😱"
+}
+
+function fail() {
+  echo -e "\e[31mFail:\e[m $* 😭"
+  exit 1
+}
+
+function is_macos() {
+  if [[ "$OSTYPE" == "darwin"* ]]; then
+    true
+  elif [[ "$OSTYPE" == "linux"* ]]; then
+    false
+  else
+    fail "Unsupported platform..."
+  fi
+}
 
 function install_or_update_brew() {
   function brew_bundle() {

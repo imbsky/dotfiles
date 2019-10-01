@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 
-source "$HOME/src/github.com/imbsky/dotfiles/etc/utils.sh"
+function fail() {
+  echo -e "\e[31mFail:\e[m $* 😭"
+  exit 1
+}
 
 function brewBundleDump() {
   echo "Running brew bundle dump..."
