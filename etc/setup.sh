@@ -32,6 +32,7 @@ function install_or_update_brew() {
 
 function install_fish() {
   if [ $(echo $SHELL) == $(which bash) ]; then
+    brew install fish
     echo "/usr/local/bin/fish" | sudo tee -a /etc/shells >/dev/null
     sudo chsh -s /usr/local/bin/fish
   else
