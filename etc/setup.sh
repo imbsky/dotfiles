@@ -96,15 +96,17 @@ function install_or_update_nanorc() {
 }
 
 function setup() {
-  # Ask for the administrator password upfront
-  sudo -v || fail "Could not get the administrator password!"
+  if [ -z "$GITHUB_WORKFLOW" ]; then
+    # Ask for the administrator password upfront
+    sudo -v || fail "Could not get the administrator password!"
 
-  # Keep-alive: update existing `sudo` time stamp until this script has finished
-  while true; do
-    sudo -n true
-    sleep 600
-    kill -0 "$$" || exit
-  done 2>/dev/null &
+    # Keep-alive: update existing `sudo` time stamp until this script has finished
+    while true; do
+      sudo -n true
+      sleep 600
+      kill -0 "$$" || exit
+    done 2>/dev/null &
+  fi
 
   if [ is_macos ]; then
     echo -e "🏃 Setting up your \e[34mmacOS\e[m environment..."
