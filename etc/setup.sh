@@ -63,7 +63,7 @@ function install_asdf() {
 function install_or_update_nanorc() {
   function download_nanorc() {
     echo "🚧 Downloading nanorc..."
-    curl --silent --location --create-dirs --output "$HOME/src/github.com/imbsky/dotfiles/nanorc" "https://raw.githubusercontent.com/scopatz/nanorc/master/nanorc" || fail "Could not download nanorc"
+    curl --silent --location --create-dirs --output "$HOME/.nanorc" "https://raw.githubusercontent.com/scopatz/nanorc/master/nanorc" || fail "Could not download nanorc"
   }
 
   if [ -d "$HOME/.nano" ]; then
