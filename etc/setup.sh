@@ -67,7 +67,7 @@ function install_asdf() {
     warn "asdf is already installed!"
   else
     echo "🚧 Installing asdf..."
-    brew install asdf >/dev/null || fail "Could not download asdf"
+    brew install asdf >/dev/null
   fi
 }
 
@@ -86,6 +86,16 @@ function install_or_update_nanorc() {
     echo "🚧 Cloning nanorc..."
     git clone https://github.com/scopatz/nanorc $HOME/.nano >/dev/null || fail "Could not clone nanorc repository"
     download_nanorc
+  fi
+}
+
+function install_rcm() {
+  if [ -x "$(type -p lsrc)" ]; then
+    warn "rcm is already installed!"
+  else
+    echo "🚧 Installing rcm..."
+    brew tap thoughtbot/formulae >/dev/null
+    brew install rcm >/dev/null
   fi
 }
 
@@ -109,6 +119,7 @@ function setup() {
     install_fish
     install_or_update_fisher
     install_or_update_nanorc
+    install_rcm
   else
     echo -e "🏃 Setting up your \e[33mLinux\e[m environment..."
     echo "🚧 WIP!"
