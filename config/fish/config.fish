@@ -1,3 +1,5 @@
+eval (starship init fish)
+
 set -x PATH /usr/local/sbin $PATH
 
 source /usr/local/opt/asdf/asdf.fish
