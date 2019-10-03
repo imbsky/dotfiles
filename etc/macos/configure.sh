@@ -9,6 +9,16 @@ function fail() {
   exit 1
 }
 
+function is_macos() {
+  if [[ "$OSTYPE" == "darwin"* ]]; then
+    true
+  elif [[ "$OSTYPE" == "linux"* ]]; then
+    false
+  else
+    fail "Unsupported platform..."
+  fi
+}
+
 function configure_macos() {
   (
     echo "🚧 Configuring my macOS..."
