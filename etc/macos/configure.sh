@@ -40,7 +40,7 @@ function configure_macos() {
     defaults write com.apple.LaunchServices LSQuarantine -bool false
 
     # Disable Notification Center and remove the menu bar icon
-    launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2>/dev/null
+    launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist &>/dev/null
 
     # Disable automatic capitalization as it’s annoying when typing code
     defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
@@ -61,7 +61,7 @@ function configure_macos() {
     defaults write NSGlobalDomain AppleLanguages -array "en" "ja"
 
     # Set the timezone
-    sudo systemsetup -settimezone "Asia/Tokyo" >/dev/null
+    sudo systemsetup -settimezone "Asia/Tokyo" &>/dev/null
 
     # Hibernation mode
     # 0: Disable hibernation (speeds up entering sleep mode)

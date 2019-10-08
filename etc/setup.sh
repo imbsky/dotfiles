@@ -25,40 +25,40 @@ function install_or_update_brew() {
       warn "Brew is already installed!"
     else
       echo "🚧 Installing brew..."
-      /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" >/dev/null || fail "Could not install brew"
+      /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" &>/dev/null || fail "Could not install brew"
     fi
   fi
 }
 
 function install_fish() {
   if [ $(echo $SHELL) == $(which bash) ]; then
-    brew install fish >/dev/null
-    echo "/usr/local/bin/fish" | sudo tee -a /etc/shells >/dev/null
-    sudo chsh -s /usr/local/bin/fish >/dev/null
+    brew install fish &>/dev/null
+    echo "/usr/local/bin/fish" | sudo tee -a /etc/shells &>/dev/null
+    sudo chsh -s /usr/local/bin/fish &>/dev/null
   else
     warn "Fish is already set as your default shell!"
   fi
 }
 
 function install_or_update_fisher() {
-  if [ -x "$(type -p fisher)" ]; then
+  if [ -f "$HOME/.config/fish/functions/fisher.fish" ]; then
     echo "🚧 Updating all fisher packages..."
     (
       fish <<EOF
         fisher
 EOF
-    ) >/dev/null || fail "Could not update fisher packages!"
+    ) && >/dev/null || fail "Could not update fisher packages!"
   else
     echo "🚧 Downloading fisher..."
     curl --silent --location --create-dirs --output "$HOME/.config/fish/functions/fisher.fish" "https://git.io/fisher" || fail "Could not download fisher"
     echo "🚧 Installing fisher packages..."
     (
       fish <<EOF
-        fisher add matchai/spacefish >/dev/null
-        fisher add decors/fish-ghq >/dev/null
-        fisher add oh-my-fish/plugin-peco >/dev/null
+        fisher add matchai/spacefish &>/dev/null
+        fisher add decors/fish-ghq &>/dev/null
+        fisher add oh-my-fish/plugin-peco &>/dev/null
 EOF
-    ) >/dev/null || fail "Could not install fisher packages"
+    ) &>/dev/null || fail "Could not install fisher packages"
   fi
 }
 
@@ -67,7 +67,7 @@ function install_asdf() {
     warn "asdf is already installed!"
   else
     echo "🚧 Installing asdf..."
-    brew install asdf >/dev/null
+    brew install asdf &>/dev/null
   fi
 }
 
@@ -80,11 +80,11 @@ function install_or_update_nanorc() {
   if [ -d "$HOME/.nano" ]; then
     echo "🚧 Updating nanorc..."
     cd "$HOME/.nano"
-    git pull >/dev/null || fail "Could not pull latest master branch"
+    git pull &>/dev/null || fail "Could not pull latest master branch"
     download_nanorc
   else
     echo "🚧 Cloning nanorc..."
-    git clone https://github.com/scopatz/nanorc $HOME/.nano >/dev/null || fail "Could not clone nanorc repository"
+    git clone https://github.com/scopatz/nanorc $HOME/.nano &>/dev/null || fail "Could not clone nanorc repository"
     download_nanorc
   fi
 }
@@ -94,8 +94,8 @@ function install_rcm() {
     warn "rcm is already installed!"
   else
     echo "🚧 Installing rcm..."
-    brew tap thoughtbot/formulae >/dev/null
-    brew install rcm >/dev/null
+    brew tap thoughtbot/formulae &>/dev/null
+    brew install rcm &>/dev/null
   fi
 }
 
