@@ -7,7 +7,7 @@ function fail() {
 
 function brewBundleDump() {
   echo "Running brew bundle dump..."
-  brew bundle dump --file="$HOME/src/github.com/imbsky/dotfiles/etc/homebrew/Brewfile" &>/dev/null || fail "Could not dump brew stuff!"
+  brew bundle dump --file="$HOME/src/github.com/imbsky/dotfiles/etc/homebrew/Brewfile" || fail "Could not dump brew stuff!"
   echo "🏁 Done!"
 }
 
