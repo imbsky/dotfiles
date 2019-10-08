@@ -47,7 +47,7 @@ function install_or_update_fisher() {
       fish <<EOF
         fisher
 EOF
-    ) && >/dev/null || fail "Could not update fisher packages!"
+    ) &>/dev/null || fail "Could not update fisher packages!"
   else
     echo "🚧 Downloading fisher..."
     curl --silent --location --create-dirs --output "$HOME/.config/fish/functions/fisher.fish" "https://git.io/fisher" || fail "Could not download fisher"
