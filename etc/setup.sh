@@ -58,7 +58,7 @@ EOF
         fisher add decors/fish-ghq
         fisher add oh-my-fish/plugin-peco
 EOF
-    ) || fail "Could not install fisher packages"
+    ) &>/dev/null || fail "Could not install fisher packages"
   fi
 }
 
