@@ -54,9 +54,9 @@ EOF
     echo "🚧 Installing fisher packages..."
     (
       fish <<EOF
-        fisher add matchai/spacefish &>/dev/null
-        fisher add decors/fish-ghq &>/dev/null
-        fisher add oh-my-fish/plugin-peco &>/dev/null
+        fisher add matchai/spacefish
+        fisher add decors/fish-ghq
+        fisher add oh-my-fish/plugin-peco
 EOF
     ) || fail "Could not install fisher packages"
   fi
