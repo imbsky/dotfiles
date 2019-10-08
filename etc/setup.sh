@@ -25,31 +25,30 @@ function install_or_update_brew() {
       warn "Brew is already installed!"
     else
       echo "🚧 Installing brew..."
-      /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" &>/dev/null || fail "Could not install brew"
+      /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" || fail "Could not install brew"
       echo "🚧 Installing packages with brew..."
+      brew tap thoughtbot/formulae | fail "Could not tap thoughtbot/formulae"
       brew install \
         alp asdf bash bat binutils coreutils curl diffutils exa ffmpeg \
         findutils fish gawk gcc ghq git gnu-tar gnupg gnutls grep gzip htop \
         hub imagemagick jq llvm make moreutils mtr nano neofetch openssh \
-        openssl peco rcm shellcheck shfmt tree unrar unzip wget youtube-dl \
-        &>/dev/null || fail "Could not install packages"
+        openssl peco rcm shellcheck shfmt tree unrar unzip wget youtube-dl || fail "Could not install packages"
       echo "🚧 Installing applications with brew..."
-      brew tap homebrew/cask-fonts &>/dev/null || fail "Could not tap homebrew/cask-fonts"
+      brew tap homebrew/cask-fonts || fail "Could not tap homebrew/cask-fonts"
       brew cask install \
         1password dash google-cloud-sdk font-fira-code visual-studio-code \
-        ableton-live-standard discord handbrake slack alacritty docker itsycal \
-        alfred dropbox karabiner-elements spotify bartender editaro kindle \
-        cyberduck charles typora cleanmymac paw zoomus private-internet-access \
-        &>/dev/null || fail "Could not install applications"
+        discord handbrake slack alacritty docker itsycal kindle editaro paw \
+        alfred dropbox karabiner-elements spotify bartender zoomus cyberduck \
+        charles cleanmymac private-internet-access || fail "Could not install applications"
     fi
   fi
 }
 
 function install_fish() {
   if [ $(echo $SHELL) == $(which bash) ]; then
-    brew install fish &>/dev/null
-    echo "/usr/local/bin/fish" | sudo tee -a /etc/shells &>/dev/null
-    sudo chsh -s /usr/local/bin/fish &>/dev/null
+    brew install fish
+    echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
+    sudo chsh -s /usr/local/bin/fish
   else
     warn "Fish is already set as your default shell!"
   fi
@@ -62,7 +61,7 @@ function install_or_update_fisher() {
       fish <<EOF
         fisher
 EOF
-    ) &>/dev/null || fail "Could not update fisher packages!"
+    ) || fail "Could not update fisher packages!"
   else
     echo "🚧 Downloading fisher..."
     curl --silent --location --create-dirs --output "$HOME/.config/fish/functions/fisher.fish" "https://git.io/fisher" || fail "Could not download fisher"
@@ -73,7 +72,7 @@ EOF
         fisher add decors/fish-ghq
         fisher add oh-my-fish/plugin-peco
 EOF
-    ) &>/dev/null || fail "Could not install fisher packages"
+    ) || fail "Could not install fisher packages"
   fi
 }
 
@@ -82,7 +81,7 @@ function install_asdf() {
     warn "asdf is already installed!"
   else
     echo "🚧 Installing asdf..."
-    brew install asdf &>/dev/null
+    brew install asdf
   fi
 }
 
@@ -95,11 +94,11 @@ function install_or_update_nanorc() {
   if [ -d "$HOME/.nano" ]; then
     echo "🚧 Updating nanorc..."
     cd "$HOME/.nano"
-    git pull &>/dev/null || fail "Could not pull latest master branch"
+    git pull || fail "Could not pull latest master branch"
     download_nanorc
   else
     echo "🚧 Cloning nanorc..."
-    git clone https://github.com/scopatz/nanorc $HOME/.nano &>/dev/null || fail "Could not clone nanorc repository"
+    git clone https://github.com/scopatz/nanorc $HOME/.nano || fail "Could not clone nanorc repository"
     download_nanorc
   fi
 }
@@ -109,8 +108,8 @@ function install_rcm() {
     warn "rcm is already installed!"
   else
     echo "🚧 Installing rcm..."
-    brew tap thoughtbot/formulae &>/dev/null
-    brew install rcm &>/dev/null
+    brew tap thoughtbot/formulae
+    brew install rcm
   fi
 }
 
@@ -135,11 +134,11 @@ function setup() {
     install_or_update_fisher
     install_or_update_nanorc
     install_rcm
+    warn "🏁 Done. Note that some of these changes require a logout/restart to take effect!"
   else
     echo -e "🏃 Setting up your \e[33mLinux\e[m environment..."
     echo "🚧 WIP!"
   fi
-  warn "🏁 Done. Note that some of these changes require a logout/restart to take effect!"
 }
 
 setup
