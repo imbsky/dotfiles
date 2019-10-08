@@ -26,6 +26,21 @@ function install_or_update_brew() {
     else
       echo "🚧 Installing brew..."
       /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" &>/dev/null || fail "Could not install brew"
+      echo "🚧 Installing packages with brew..."
+      brew install \
+        alp asdf bash bat binutils coreutils curl diffutils exa ffmpeg \
+        findutils fish gawk gcc ghq git gnu-tar gnupg gnutls grep gzip htop \
+        hub imagemagick jq llvm make moreutils mtr nano neofetch openssh \
+        openssl peco rcm shellcheck shfmt tree unrar unzip wget youtube-dl \
+        &>/dev/null || fail "Could not install packages"
+      echo "🚧 Installing applications with brew..."
+      brew tap homebrew/cask-fonts &>/dev/null || fail "Could not tap homebrew/cask-fonts"
+      brew cask install \
+        1password dash google-cloud-sdk font-fira-code visual-studio-code \
+        ableton-live-standard discord handbrake slack alacritty docker itsycal \
+        alfred dropbox karabiner-elements spotify bartender editaro kindle \
+        cyberduck charles typora cleanmymac paw zoomus private-internet-access \
+        &>/dev/null || fail "Could not install applications"
     fi
   fi
 }
