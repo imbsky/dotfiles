@@ -2,6 +2,9 @@ set -x PATH /usr/local/sbin $PATH
 
 source /usr/local/opt/asdf/asdf.fish
 
+# Opam configuration
+source $HOME/.opam/opam-init/init.fish >/dev/null 2>/dev/null || true
+
 set GHQ_SELECTOR peco
 
 # Bind for prco history to Ctrl+r
