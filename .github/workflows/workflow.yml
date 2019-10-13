@@ -14,7 +14,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v1
 
-      - name: Install rcm for macOS
+      - name: Install rcm
         run: |
           brew tap thoughtbot/formulae
           brew install rcm
