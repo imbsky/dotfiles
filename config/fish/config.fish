@@ -12,8 +12,14 @@ function fish_user_key_bindings
   bind \cr peco_select_history
 end
 
+# Add CPATH
+set -x CPATH /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include
+
 # Add llvm path
 set -x PATH /usr/local/opt/llvm/bin $PATH
+set -x CFLAGS -I/usr/local/opt/llvm/include
+set -x CPPFLAGS -I/usr/local/opt/llvm/include
+set -x LDFLAGS -L/usr/local/opt/llvm/lib
 
 # Add yarn global path
 set -x PATH (yarn global bin) $PATH
