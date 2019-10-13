@@ -8,8 +8,6 @@ My dotfiles
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 [![License](https://img.shields.io/github/license/imbsky/dotfiles?color=brightgreen)](https://github.com/imbsky/dotfiles/blob/master/LICENSE)
 
-🚧 Work in Progress
-
 ## Initial setup (macOS)
 
 ```bash
