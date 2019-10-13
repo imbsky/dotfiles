@@ -6,7 +6,7 @@ jobs:
   build:
     strategy:
       matrix:
-        os: [ubuntu-latest, macOS-latest]
+        os: [macOS-latest]
 
     runs-on: ${{ matrix.os }}
 
@@ -18,14 +18,6 @@ jobs:
         run: |
           brew tap thoughtbot/formulae
           brew install rcm
-        if: matrix.os == 'macos-latest'
-
-      - name: Install rcm for Ubuntu
-        run: |
-          sudo add-apt-repository ppa:martin-frost/thoughtbot-rcm
-          sudo apt-get update
-          sudo apt-get install rcm
-        if: matrix.os == 'ubuntu-latest'
 
       - name: Install the dotfiles
         env:
