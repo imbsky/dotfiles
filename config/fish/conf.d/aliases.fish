@@ -8,6 +8,10 @@ alias d 'cd ~/Dropbox'
 alias dl 'cd ~/Downloads'
 alias rf 'rm -rf'
 
+# Replace clang and clang++ commands
+alias clang="clang --sysroot=/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk"
+alias clang++="clang++ --sysroot=/Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk"
+
 # Replace default commands
 alias ls 'exa -s type'
 alias la 'exa -a -s type'
