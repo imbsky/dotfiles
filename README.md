@@ -11,6 +11,11 @@ My dotfiles
 ## Initial setup (macOS)
 
 ```bash
+echo /usr/local/bin/fish | sudo tee -a /etc/shells
+chsh -s /usr/local/bin/fish
+```
+
+```bash
 # Clone this repository
 git clone https://github.com/imbsky/dotfiles $HOME/src/github.com/imbsky/dotfiles
 
