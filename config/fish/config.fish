@@ -24,6 +24,7 @@ set -x PATH (yarn global bin) $PATH
 # Add go path
 set -x GOPATH $HOME/src/go
 set -x PATH $GOPATH/bin $PATH
+set -x GO111MODULE on
 
 # Add Java path
 set -x JAVA_HOME (asdf where java)
