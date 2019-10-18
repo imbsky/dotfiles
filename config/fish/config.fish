@@ -1,5 +1,5 @@
 # Homebrew
-set -x PATH /usr/local/bin $PATH
+set -x PATH /usr/local/sbin $PATH
 
 # asdf version manager
 source /usr/local/opt/asdf/asdf.fish
