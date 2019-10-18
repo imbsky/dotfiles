@@ -1,5 +1,5 @@
 # Homebrew
-set -x PATH /usr/local/sbin $PATH
+set -x PATH /usr/local/bin $PATH
 
 # asdf version manager
 source /usr/local/opt/asdf/asdf.fish
@@ -9,9 +9,6 @@ source ~/.opam/opam-init/init.fish >/dev/null 2>/dev/null || true
 
 # LLVM
 set -x PATH /usr/local/opt/llvm/bin $PATH
-
-# Yarn
-set -x PATH (yarn global bin) $PATH
 
 # Go
 set -x GOPATH ~/go
