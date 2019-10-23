@@ -20,3 +20,6 @@ set -x GO111MODULE on
 
 # Java
 set -x JAVA_HOME (asdf where java)
+
+# SDKROOT
+set -x SDKROOT (env DEVELOPER_DIR=/Library/Developer/CommandLineTools xcrun --sdk macosx --show-sdk-path)
