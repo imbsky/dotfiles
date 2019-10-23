@@ -1,2 +1,2 @@
-EXCLUDES=".github etc .editorconfig README.md LICENSE"
+EXCLUDES=".dependabot .github etc .editorconfig README.md LICENSE"
 DOTFILES_DIRS="$HOME/src/github.com/imbsky/dotfiles"
