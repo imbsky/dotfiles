@@ -1,3 +1,6 @@
+# Starship
+starship init fish | source
+
 # Homebrew
 set -x PATH /usr/local/sbin $PATH
 
