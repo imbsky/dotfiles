@@ -1,11 +1,11 @@
 # Starship
 starship init fish | source
 
-# Homebrew
-set -x PATH /usr/local/sbin $PATH
-
 # asdf version manager
 source /usr/local/opt/asdf/asdf.fish
+
+# Homebrew
+set -x PATH /usr/local/sbin $PATH
 
 # opam initialization
 source ~/.opam/opam-init/init.fish >/dev/null 2>/dev/null || true
