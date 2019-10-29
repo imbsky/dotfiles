@@ -7,9 +7,6 @@ source /usr/local/opt/asdf/asdf.fish
 # Homebrew
 set -x PATH /usr/local/sbin $PATH
 
-# opam initialization
-source ~/.opam/opam-init/init.fish >/dev/null 2>/dev/null || true
-
 # LLVM
 set -x PATH /usr/local/opt/llvm/bin $PATH
 
