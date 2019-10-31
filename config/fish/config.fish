@@ -10,6 +10,9 @@ set -x PATH /usr/local/sbin $PATH
 # LLVM
 set -x PATH /usr/local/opt/llvm/bin $PATH
 
+# opam initialization
+source ~/.opam/opam-init/init.fish >/dev/null 2>/dev/null || true
+
 # Go
 set -x GOPATH ~/go
 set -x PATH $GOPATH/bin $PATH
