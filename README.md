@@ -8,7 +8,7 @@ My dotfiles
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 [![License](https://img.shields.io/github/license/imbsky/dotfiles?color=brightgreen)](https://github.com/imbsky/dotfiles/blob/master/LICENSE)
 
-## Initial setup (macOS)
+## Initial setup
 
 ```bash
 echo /usr/local/bin/fish | sudo tee -a /etc/shells
@@ -23,22 +23,10 @@ git clone https://github.com/imbsky/dotfiles $HOME/src/github.com/imbsky/dotfile
 env RCRC=$HOME/src/github.com/imbsky/dotfiles/rcrc rcup
 ```
 
-## Sync configuration
+## Configure environment variables for Chromium
 
 ```bash
-# Change directory to this repository's directory
-cd $HOME/src/github.com/imbsky/dotfiles
-
-# Pull the latest master branch
-git pull
-
-# Re-install the dotfiles
-env RCRC=$HOME/src/github.com/imbsky/dotfiles/rcrc rcup
-```
-
-## Uninstall the dotfiles
-
-```bash
-# Uninstall the dotfiles
-env RCRC=$HOME/src/github.com/imbsky/dotfiles/rcrc rcdn
+launchctl setenv GOOGLE_API_KEY <key>
+launchctl setenv GOOGLE_DEFAULT_CLIENT_ID <id>
+launchctl setenv GOOGLE_DEFAULT_CLIENT_SECRET <secret>
 ```
