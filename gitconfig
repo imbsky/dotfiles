@@ -15,5 +15,8 @@ graph = log --graph --date-order --all --pretty=format:'%h %Cred%d %Cgreen%ad %C
 [protocol]
 version = 2
 
+[gpg]
+program = /usr/local/bin/gpg
+
 [ghq]
 root = ~/src
