@@ -5,8 +5,8 @@ starship init fish | source
 source /usr/local/opt/asdf/asdf.fish
 
 # direnv
-direnv hook fish | source
-set -x DIRENV_LOG_FORMAT
+# direnv hook fish | source
+# set -x DIRENV_LOG_FORMAT
 
 # Brew
 set -x PATH /usr/local/sbin $PATH
