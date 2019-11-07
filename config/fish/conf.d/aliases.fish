@@ -13,7 +13,7 @@ alias ls 'exa -s type'
 alias la 'exa -a -s type'
 
 # bundler shortcuts
-alias bi 'bundle install --path vendor/bundle'
+alias bi 'bundle install --path vendor/bundle --jobs=(getconf _NPROCESSORS_ONLN)'
 alias be 'bundle exec'
 
 # IP addresses
