@@ -2,6 +2,9 @@
 name = BSKY
 email = git@bsky.moe
 
+[core]
+precomposeUnicode = true
+
 [push]
 default = simple
 
