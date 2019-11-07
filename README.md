@@ -1,12 +1,6 @@
-<div align="center">
-<h1>dotfiles 🗃</h1>
-My dotfiles
-</div>
-<hr />
+# dotfiles [![Main workflow](https://github.com/imbsky/dotfiles/workflows/Main%20workflow/badge.svg)](https://github.com/imbsky/dotfiles/actions)
 
-[![Main workflow](https://github.com/imbsky/dotfiles/workflows/Main%20workflow/badge.svg)](https://github.com/imbsky/dotfiles/actions)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
-[![License](https://img.shields.io/github/license/imbsky/dotfiles?color=brightgreen)](https://github.com/imbsky/dotfiles/blob/master/LICENSE)
+My dotfiles
 
 ## Initial setup
 
