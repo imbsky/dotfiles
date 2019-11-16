@@ -11,6 +11,9 @@ source /usr/local/opt/asdf/asdf.fish
 # Brew
 set -x PATH /usr/local/sbin $PATH
 
+# Yarn
+set -x PATH ~/.asdf/installs/nodejs/(node --version | tr -d 'v')/.npm/bin $PATH
+
 # LLVM
 set -x PATH /usr/local/opt/llvm/bin $PATH
 
