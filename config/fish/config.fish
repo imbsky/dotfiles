@@ -2,7 +2,7 @@
 starship init fish | source
 
 # asdf version manager
-source /usr/local/opt/asdf/asdf.fish
+source ~/.asdf/asdf.fish
 
 # direnv
 # direnv hook fish | source
