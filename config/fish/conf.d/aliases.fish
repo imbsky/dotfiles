@@ -16,6 +16,9 @@ alias la 'exa -a -s type'
 alias bi 'bundle install --path vendor/bundle --jobs=(getconf _NPROCESSORS_ONLN)'
 alias be 'bundle exec'
 
+# opam shortcut
+alias opamup 'opam update --all --upgrade --jobs=(getconf _NPROCESSORS_ONLN) --yes'
+
 # IP addresses
 alias pubip4 'dig +short -4 myip.opendns.com @resolver1.opendns.com'
 alias pubip6 'dig +short -6 myip.opendns.com aaaa @resolver1.ipv6-sandbox.opendns.com'
