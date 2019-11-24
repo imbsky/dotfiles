@@ -12,6 +12,9 @@ alias rf 'rm -rf'
 alias ls 'exa -s type'
 alias la 'exa -a -s type'
 
+# homebrew shortcut
+alias brewup 'brew update && brew upgrade && brew cask upgrade && brew cleanup && brew doctor && brew cask doctor'
+
 # bundler shortcuts
 alias bi 'bundle install --path vendor/bundle --jobs=(getconf _NPROCESSORS_ONLN)'
 alias be 'bundle exec'
