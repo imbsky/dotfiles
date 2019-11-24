@@ -37,9 +37,6 @@ alias lscleanup '/System/Library/Frameworks/CoreServices.framework/Frameworks/La
 # Copy working directory
 alias cwd 'pwd | tr -d "\r\n" | pbcopy'
 
-# Untar
-alias untar 'tar xvf'
-
 # macOS has no `md5sum`, so use `md5` as a fallback
 alias md5sum 'md5'
 
