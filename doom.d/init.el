@@ -99,7 +99,7 @@
        ;;ess
        ;;faust
        fsharp
-       go
+       ( go +lsp)
        (haskell +intero)
        ;;hy
        ;;idris
@@ -135,9 +135,9 @@
        ( ruby +lsp)
        ( scala +lsp)
        scheme
-       sh
+       ( sh +fish +lsp)
        ;;solidity
-       swift
+       ( swift +lsp)
        ;;terra
        ( web  +lsp)
 
