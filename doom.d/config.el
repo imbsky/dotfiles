@@ -6,3 +6,8 @@
       company-show-numbers t)
 
 (def-package! company-tabnine :init (add-to-list 'company-backends 'company-tabnine))
+
+(eval-after-load 'web-mode
+  '(progn
+       (add-hook 'web-mode-hook 'add-node-modules-path)
+       (add-hook 'web-mode-hook 'prettier-js-mode)))

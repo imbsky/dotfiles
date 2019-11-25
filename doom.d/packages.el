@@ -8,3 +8,5 @@
 
 (package! company-tabnine)
 (package! reason-mode)
+(package! prettier-js)
+(package! add-node-modules-path)
