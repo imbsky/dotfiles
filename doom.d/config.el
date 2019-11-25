@@ -1,10 +1,6 @@
-(setq doom-font (font-spec :family "Fira Code" :size 12))
+;;; .doom.d/config.el -*- lexical-binding: t; -*-
 
-(setq org-directory "~/src"
-      org-ellipsis " ▼ "
-      org-bullets-bullet-list '("#"))
-(after! org
-  (add-to-list 'org-modules 'org-habit t))
+;; Place your private configuration here
 
 (setq company-idle-delay 0
       company-show-numbers t)
