@@ -1,4 +1,4 @@
-(setq doom-font (font-spec :family "Fira Code" :size 14))
+(setq doom-font (font-spec :family "Fira Code" :size 12))
 
 (setq org-directory "~/src"
       org-ellipsis " ▼ "
