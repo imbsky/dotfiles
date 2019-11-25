@@ -1,6 +1,6 @@
-# dotfiles [![Main workflow](https://github.com/imbsky/dotfiles/workflows/Main%20workflow/badge.svg)](https://github.com/imbsky/dotfiles/actions)
+# dotfiles
 
-My dotfiles
+[![Main workflow](https://github.com/imbsky/dotfiles/workflows/Main%20workflow/badge.svg)](https://github.com/imbsky/dotfiles/actions)
 
 ## Initial setup
 
