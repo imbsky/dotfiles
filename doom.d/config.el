@@ -10,4 +10,3 @@
       company-show-numbers t)
 
 (def-package! company-tabnine :init (add-to-list 'company-backends 'company-tabnine))
-TabNine::config
