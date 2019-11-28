@@ -1,6 +1,6 @@
 # dotfiles
 
-[![Main workflow](https://github.com/imbsky/dotfiles/workflows/Main%20workflow/badge.svg)](https://github.com/imbsky/dotfiles/actions)
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/imbsky/dotfiles/Main%20workflow?style=flat-square)](https://github.com/imbsky/dotfiles/actions)
 
 ## Initial setup
 
