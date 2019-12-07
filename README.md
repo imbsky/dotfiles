@@ -30,6 +30,12 @@ git clone https://github.com/imbsky/dotfiles $HOME/src/github.com/imbsky/dotfile
 env RCRC=$HOME/src/github.com/imbsky/dotfiles/rcrc rcup
 ```
 
+```bash
+fisher add decors/fish-ghq
+fisher add lilyball/nix-env.fish
+fisher add oh-my-fish/plugin-peco
+```
+
 ## Configure environment variables for Chromium
 
 ```bash
