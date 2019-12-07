@@ -8,14 +8,8 @@ source ~/.asdf/asdf.fish
 # direnv hook fish | source
 # set -x DIRENV_LOG_FORMAT
 
-# Brew
-set -gx PATH /usr/local/sbin $PATH
-
 # Yarn
 set -gx PATH ~/.asdf/installs/nodejs/(node --version | tr -d 'v')/.npm/bin $PATH
-
-# LLVM
-set -gx PATH /usr/local/opt/llvm/bin $PATH
 
 # opam initialization
 source ~/.opam/opam-init/init.fish >/dev/null 2>/dev/null || true

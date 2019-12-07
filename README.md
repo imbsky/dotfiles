@@ -5,8 +5,21 @@
 ## Initial setup
 
 ```bash
-echo /usr/local/bin/fish | sudo tee -a /etc/shells
-chsh -s /usr/local/bin/fish
+echo 'nix' | sudo tee -a /etc/synthetic.conf
+
+# Reboot
+
+sudo diskutil apfs addVolume disk1 APFSX Nix -mountpoint /nix
+sudo diskutil enableOwnership /nix
+sudo chflags hidden /nix
+echo "LABEL=Nix /nix apfs rw" | sudo tee -a /etc/fstab
+
+curl https://nixos.org/nix/install | sh
+```
+
+```bash
+echo /Users/imbsky/.nix-profile/bin/fish | sudo tee -a /etc/shells
+chsh -s /Users/imbsky/.nix-profile/bin/fish
 ```
 
 ```bash
