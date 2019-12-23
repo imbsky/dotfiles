@@ -11,6 +11,9 @@ alias rf 'rm -rf'
 alias bi 'bundle install --path vendor/bundle --jobs=(getconf _NPROCESSORS_ONLN)'
 alias be 'bundle exec'
 
+# homebrew shortcut
+alias brewup 'brew update && brew upgrade && brew cask upgrade && brew cleanup && brew doctor && brew cask doctor'
+
 # opam shortcut
 alias opamup 'opam update --all --upgrade --jobs=(getconf _NPROCESSORS_ONLN) --yes'
 
