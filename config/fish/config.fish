@@ -20,5 +20,8 @@ set -gx PATH /usr/local/opt/llvm/bin $PATH
 # opam configuration
 source ~/.opam/opam-init/init.fish >/dev/null 2>/dev/null || true
 
+# dotnet tools
+set -gx PATH ~/.dotnet/tools $PATH
+
 # SDKROOT
 set -gx SDKROOT (env DEVELOPER_DIR=/Library/Developer/CommandLineTools xcrun --sdk macosx --show-sdk-path)
