@@ -36,6 +36,10 @@ fisher add lilyball/nix-env.fish
 fisher add oh-my-fish/plugin-peco
 ```
 
+```bash
+defaults write -g com.apple.mouse.scaling -1
+```
+
 ## Configure environment variables for Chromium
 
 ```bash
