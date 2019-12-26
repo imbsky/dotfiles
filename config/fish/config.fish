@@ -4,6 +4,9 @@ starship init fish | source
 # asdf version manager
 source ~/.asdf/asdf.fish
 
+# Yarn
+set -gx PATH ~/.asdf/installs/nodejs/(node --version | tr -d 'v')/.npm/bin $PATH
+
 # Brew
 set -gx PATH /usr/local/sbin $PATH
 
@@ -13,6 +16,8 @@ set -gx PATH /usr/local/opt/findutils/libexec/gnubin $PATH
 set -gx PATH /usr/local/opt/gnu-sed/libexec/gnubin $PATH
 set -gx PATH /usr/local/opt/gnu-tar/libexec/gnubin $PATH
 set -gx PATH /usr/local/opt/grep/libexec/gnubin $PATH
+
+set -gx PATH /usr/local/opt/util-linux/bin $PATH
 
 # LLVM
 set -gx PATH /usr/local/opt/llvm/bin $PATH
