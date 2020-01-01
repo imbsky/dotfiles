@@ -5,7 +5,7 @@ starship init fish | source
 source ~/.asdf/asdf.fish
 
 # Yarn
-set -gx PATH ~/.asdf/installs/nodejs/(node --version | tr -d 'v')/.npm/bin $PATH
+set -gx PATH ~/.yarn/bin $PATH
 
 # Brew
 set -gx PATH /usr/local/sbin $PATH
