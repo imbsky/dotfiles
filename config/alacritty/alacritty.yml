@@ -16,13 +16,13 @@ scrolling:
 tabspaces: 2
 font:
   normal:
-    family: Fira Code
+    family: PragmataPro Mono
     style: Regular
   bold:
-    family: Fira Code
+    family: PragmataPro Mono
     style: Regular
   italic:
-    family: Fira Code
+    family: PragmataPro Mono
     style: Italic
   size: 14.0
   offset:
