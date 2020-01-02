@@ -1,3 +1,7 @@
+# gcc
+alias gcc 'gcc-9'
+alias g++ 'g++-9'
+
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ... 'cd ../..'
 alias .... 'cd ../../..'
