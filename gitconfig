@@ -1,8 +1,9 @@
 [user]
-name = BSKY
 email = git@bsky.moe
+name = BSKY
 
 [core]
+pager = delta --dark
 precomposeUnicode = true
 
 [push]
@@ -12,8 +13,8 @@ default = simple
 rebase = true
 
 [alias]
-ic = commit --allow-empty -m 'Initial commit'
 graph = log --graph --date-order --all --pretty=format:'%h %Cred%d %Cgreen%ad %Cblue%cn %Creset%s' --date=short
+ic = commit --allow-empty -m 'Initial commit'
 
 [protocol]
 version = 2
