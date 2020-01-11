@@ -4,9 +4,11 @@ on: [push, pull_request]
 
 jobs:
   build:
+    if: github.repository == 'imbsky/dotfiles'
+
     strategy:
       matrix:
-        os: [macOS-latest]
+        os: [macos-latest]
 
     runs-on: ${{ matrix.os }}
 
