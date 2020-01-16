@@ -2,41 +2,41 @@
 symbol = "λ"
 
 [aws]
-symbol = " "
+symbol = "  "
 
 [conda]
-symbol = " "
+symbol = "  "
 
 [git_branch]
-symbol = " "
+symbol = "  "
 
 [golang]
-symbol = " "
+symbol = "  "
 
 [hg_branch]
-symbol = " "
+symbol = "  "
 
 [java]
-symbol = " "
+symbol = "  "
 
 [memory_usage]
 disabled = true
-symbol = " "
+symbol = "  "
 
 [nodejs]
-symbol = " "
+symbol = "  "
 
 [package]
-symbol = " "
+symbol = "  "
 
 [php]
-symbol = " "
+symbol = "  "
 
 [python]
-symbol = " "
+symbol = "  "
 
 [ruby]
-symbol = " "
+symbol = "  "
 
 [rust]
-symbol = " "
+symbol = "  "
