@@ -5,12 +5,21 @@ name = BSKY
 [core]
 pager = delta --dark
 precomposeUnicode = true
+ignorecase = false
+quotepath = false
+
+[color]
+status = auto
+branch = auto
 
 [push]
 default = simple
 
 [pull]
 rebase = true
+
+[rebase]
+autosquash = true
 
 [alias]
 graph = log --graph --date-order --all --pretty=format:'%h %Cred%d %Cgreen%ad %Cblue%cn %Creset%s' --date=short
