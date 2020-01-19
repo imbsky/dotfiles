@@ -1,2 +1,0 @@
-source $(asdf which direnv_use_asdf)
-use asdf
