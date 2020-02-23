@@ -11,11 +11,14 @@ alias ..... 'cd ../../../..'
 alias dl 'cd ~/Downloads'
 alias rf 'rm -rf'
 
-# bundler shortcuts
+# yarn
+alias yarn 'env CHILD_CONCURRENCY=(getconf _NPROCESSORS_ONLN) NETWORK_CONCURRENCY=(getconf _NPROCESSORS_ONLN) yarn'
+
+# bundler
 alias bi 'bundle install --path vendor/bundle --jobs=(getconf _NPROCESSORS_ONLN)'
 alias be 'bundle exec'
 
-# homebrew shortcut
+# homebrew
 alias brewup 'brew update && brew upgrade && brew cask upgrade && brew cleanup && brew doctor && brew cask doctor'
 
 # opam shortcut
