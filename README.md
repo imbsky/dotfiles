@@ -27,7 +27,7 @@ chsh -s /Users/imbsky/.nix-profile/bin/fish
 git clone https://github.com/imbsky/dotfiles $HOME/src/github.com/imbsky/dotfiles
 
 # Install the dotfiles
-env RCRC=$HOME/src/github.com/imbsky/dotfiles/rcrc rcup
+RCRC=$HOME/src/github.com/imbsky/dotfiles/rcrc rcup
 ```
 
 ```bash

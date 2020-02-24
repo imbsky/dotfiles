@@ -29,4 +29,4 @@ source ~/.opam/opam-init/init.fish >/dev/null 2>/dev/null || true
 set -gx PATH ~/.dotnet/tools $PATH
 
 # SDKROOT
-set -gx SDKROOT (env DEVELOPER_DIR=/Library/Developer/CommandLineTools xcrun --sdk macosx --show-sdk-path)
+set -gx SDKROOT (DEVELOPER_DIR=/Library/Developer/CommandLineTools xcrun --sdk macosx --show-sdk-path)

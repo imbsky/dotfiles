@@ -12,7 +12,7 @@ alias dl 'cd ~/Downloads'
 alias rf 'rm -rf'
 
 # yarn
-alias yarn 'env CHILD_CONCURRENCY=(getconf _NPROCESSORS_ONLN) NETWORK_CONCURRENCY=(getconf _NPROCESSORS_ONLN) yarn'
+alias yarn 'CHILD_CONCURRENCY=(getconf _NPROCESSORS_ONLN) NETWORK_CONCURRENCY=(getconf _NPROCESSORS_ONLN) yarn'
 
 # bundler
 alias bi 'bundle install --path vendor/bundle --jobs=(getconf _NPROCESSORS_ONLN)'
