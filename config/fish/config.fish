@@ -10,13 +10,15 @@ set -gx PATH ~/.yarn/bin $PATH
 # Brew
 set -gx PATH /usr/local/sbin $PATH
 
+set -gx PATH /usr/local/opt/binutils/bin $PATH
 set -gx PATH /usr/local/opt/coreutils/libexec/gnubin $PATH
 set -gx PATH /usr/local/opt/ed/libexec/gnubin $PATH
 set -gx PATH /usr/local/opt/findutils/libexec/gnubin $PATH
 set -gx PATH /usr/local/opt/gnu-sed/libexec/gnubin $PATH
 set -gx PATH /usr/local/opt/gnu-tar/libexec/gnubin $PATH
+set -gx PATH /usr/local/opt/gnu-which/libexec/gnubin $PATH
+set -gx PATH /usr/local/opt/gnu-which/libexec/gnubin $PATH
 set -gx PATH /usr/local/opt/grep/libexec/gnubin $PATH
-
 set -gx PATH /usr/local/opt/util-linux/bin $PATH
 
 # LLVM
