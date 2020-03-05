@@ -2,15 +2,33 @@
 
 [![GitHub Workflow Status](https://img.shields.io/github/workflow/status/imbsky/dotfiles/Main%20workflow?style=flat-square)](https://github.com/imbsky/dotfiles/actions)
 
-## Initial setup
+## Installation instructions
+
+### Base
 
 ```bash
-# Clone this repository
 git clone https://github.com/imbsky/dotfiles $HOME/src/github.com/imbsky/dotfiles
+```
 
-# Install the dotfiles
+```bash
 RCRC=$HOME/src/github.com/imbsky/dotfiles/rcrc rcup
 ```
+
+### Common
+
+#### Install nanorc
+
+```bash
+curl https://raw.githubusercontent.com/scopatz/nanorc/master/install.sh | sh
+```
+
+#### Install fisher
+
+```bash
+curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
+```
+
+#### Install fisher packages
 
 ```bash
 fisher add decors/fish-ghq
