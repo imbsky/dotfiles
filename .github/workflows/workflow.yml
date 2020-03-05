@@ -22,6 +22,7 @@ jobs:
           brew install rcm
 
       - name: Install the dotfiles
-        env:
-          RCRC: $GITHUB_WORKSPACE/rcrc
-        run: rcup
+        run: rcup -f -d $GITHUB_WORKSPACE
+
+      - name: Run test
+        run: if [ -f "$HOME/.config/fish/config.fish" ]; then exit 0; else exit 1; fi
