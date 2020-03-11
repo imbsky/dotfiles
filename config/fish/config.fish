@@ -23,11 +23,16 @@ set -gx PATH /usr/local/opt/util-linux/bin $PATH
 # LLVM
 set -gx PATH /usr/local/opt/llvm/bin $PATH
 
-# opam configuration
+# opam
 source ~/.opam/opam-init/init.fish >/dev/null 2>/dev/null || true
 
-# dotnet tools
+# .NET
 set -gx PATH ~/.dotnet/tools $PATH
+
+# Go
+set -gx GOPATH ~/go
+set -gx PATH $GOPATH/bin $PATH
+set -gx GO111MODULE on
 
 # SDKROOT
 set -gx SDKROOT (env DEVELOPER_DIR=/Library/Developer/CommandLineTools xcrun --sdk macosx --show-sdk-path)
