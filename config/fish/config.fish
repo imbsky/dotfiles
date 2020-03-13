@@ -1,5 +1,5 @@
 # Starship
-starship init fish | source
+# starship init fish | source
 
 # asdf version manager
 source ~/.asdf/asdf.fish
