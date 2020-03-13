@@ -31,6 +31,7 @@ curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fi
 #### Install fisher packages
 
 ```bash
+fisher add rafaelrinaldi/pure
 fisher add decors/fish-ghq
 fisher add oh-my-fish/plugin-peco
 ```
