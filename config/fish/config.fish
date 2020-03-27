@@ -12,6 +12,8 @@ set -gx DIRENV_LOG_FORMAT
 set -gx PATH ~/.yarn/bin $PATH
 
 # Brew
+set -gx HOMEBREW_MAKE_JOBS (getconf _NPROCESSORS_ONLN)
+
 set -gx PATH /usr/local/sbin $PATH
 
 set -gx PATH /usr/local/opt/coreutils/libexec/gnubin $PATH
