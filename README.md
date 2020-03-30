@@ -35,7 +35,3 @@ fisher add rafaelrinaldi/pure
 fisher add decors/fish-ghq
 fisher add oh-my-fish/plugin-peco
 ```
-
-```bash
-defaults write -g com.apple.mouse.scaling -1
-```
