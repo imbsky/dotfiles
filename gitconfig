@@ -3,7 +3,6 @@ email = git@bsky.moe
 name = BSKY
 
 [core]
-pager = delta --dark
 precomposeUnicode = true
 ignorecase = false
 quotepath = false
@@ -29,7 +28,7 @@ ic = commit --allow-empty -m 'Initial commit'
 version = 2
 
 [gpg]
-program = /usr/local/bin/gpg
+program = /usr/bin/gpg
 
 [ghq]
 root = ~/src
