@@ -1,0 +1,61 @@
+{
+  "$schema": "https://aka.ms/terminal-profiles-schema",
+  "defaultProfile": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+  "profiles": {
+    "defaults": {
+      "fontFace": "PragmataPro",
+      "colorScheme": "Base16"
+    },
+    "list": [
+      {
+        "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+        "name": "Windows PowerShell",
+        "commandline": "powershell.exe",
+        "hidden": false
+      },
+      {
+        "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+        "name": "cmd",
+        "commandline": "cmd.exe",
+        "hidden": false
+      },
+      {
+        "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+        "hidden": true,
+        "name": "Azure Cloud Shell",
+        "source": "Windows.Terminal.Azure"
+      },
+      {
+        "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+        "hidden": false,
+        "name": "Ubuntu",
+        "source": "Windows.Terminal.Wsl",
+        "commandline": "wsl.exe ~ -d Ubuntu"
+      }
+    ]
+  },
+  "schemes": [
+    {
+      "name": "Base16",
+      "foreground": "#D0D0D0",
+      "background": "#151515",
+      "black": "#151515",
+      "brightBlack": "#505050",
+      "red": "#AC4142",
+      "brightRed": "#AC4142",
+      "green": "#90A959",
+      "brightGreen": "#90A959",
+      "yellow": "#F4BF75",
+      "brightYellow": "#F4BF75",
+      "blue": "#6A9FB5",
+      "brightBlue": "#6A9FB5",
+      "cyan": "#75B5AA",
+      "brightCyan": "#75B5AA",
+      "purple": "#AA759F",
+      "brightPurple": "#AA759F",
+      "white": "#D0D0D0",
+      "brightWhite": "#F5F5F5"
+    }
+  ],
+  "keybindings": []
+}
