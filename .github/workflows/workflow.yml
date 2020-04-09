@@ -1,12 +1,15 @@
 name: Main workflow
 
-on: [push, pull_request]
+on:
+  - push
+  - pull_request
 
 jobs:
   build:
     strategy:
       matrix:
-        os: [macos-latest]
+        os:
+          - ubuntu-latest
 
     runs-on: ${{ matrix.os }}
 
@@ -16,8 +19,10 @@ jobs:
 
       - name: Install rcm
         run: |
-          brew tap thoughtbot/formulae
-          brew install rcm
+          wget -qO - https://apt.thoughtbot.com/thoughtbot.gpg.key | sudo apt-key add -
+          echo "deb https://apt.thoughtbot.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/thoughtbot.list
+          sudo apt-get update
+          sudo apt-get install rcm
 
       - name: Install the dotfiles
         run: rcup -f -d $GITHUB_WORKSPACE
