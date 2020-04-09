@@ -5,6 +5,7 @@ alias ..... 'cd ../../../..'
 
 # Shortcuts
 alias rf 'rm -rf'
+alias cwd 'wslpath -w (pwd) | clip.exe'
 
 # yarn
 alias yarn 'env CHILD_CONCURRENCY=(getconf _NPROCESSORS_ONLN) NETWORK_CONCURRENCY=(getconf _NPROCESSORS_ONLN) yarn'
