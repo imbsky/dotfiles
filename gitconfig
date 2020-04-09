@@ -27,5 +27,8 @@ ic = commit --allow-empty -m 'Initial commit'
 [gpg]
 program = /usr/bin/gpg
 
+[url "git@github.com:"]
+insteadOf = https://github.com
+
 [ghq]
 root = ~/src
