@@ -1,6 +1,7 @@
 {
   "$schema": "https://aka.ms/terminal-profiles-schema",
   "defaultProfile": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+  "copyOnSelect": false,
   "profiles": {
     "defaults": {
       "colorScheme": "Base16",
@@ -57,5 +58,9 @@
       "brightWhite": "#F5F5F5"
     }
   ],
-  "keybindings": []
+  "keybindings": [
+    { "command": "find", "keys": "ctrl+shift+f" },
+    { "command": "paste", "keys": "ctrl+v" },
+    { "command": { "action": "copy", "singleLine": false }, "keys": "ctrl+c" }
+  ]
 }
