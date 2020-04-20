@@ -3,13 +3,15 @@ email = git@bsky.moe
 name = BSKY
 
 [core]
-precomposeUnicode = true
+autocrlf=false
+eol=lf
 ignorecase = false
+precomposeUnicode = true
 quotepath = false
 
 [color]
-status = auto
 branch = auto
+status = auto
 
 [push]
 default = simple
