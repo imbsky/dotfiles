@@ -9,6 +9,9 @@ ignorecase = false
 precomposeUnicode = true
 quotepath = false
 
+[protocol]
+version = 2
+
 [color]
 branch = auto
 status = auto
