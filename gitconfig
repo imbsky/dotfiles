@@ -5,6 +5,9 @@ name = BSKY
 [core]
 autocrlf=false
 eol=lf
+filemode = false
+fscache = true
+hooksPath = ~/src/github.com/imbsky/dotfiles/git-hooks
 ignorecase = false
 precomposeUnicode = true
 quotepath = false
@@ -28,9 +31,6 @@ autosquash = true
 [alias]
 graph = log --graph --date-order --all --pretty=format:'%h %Cred%d %Cgreen%ad %Cblue%cn %Creset%s' --date=short
 ic = commit --allow-empty -m 'Initial commit'
-
-[gpg]
-program = /usr/bin/gpg
 
 [url "git@github.com:"]
 insteadOf = https://github.com
