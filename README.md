@@ -14,21 +14,19 @@ git clone https://github.com/imbsky/dotfiles $HOME/src/github.com/imbsky/dotfile
 RCRC=$HOME/src/github.com/imbsky/dotfiles/rcrc rcup
 ```
 
-### Common
-
-#### Install nanorc
+### Install nanorc
 
 ```bash
 curl https://raw.githubusercontent.com/scopatz/nanorc/master/install.sh | sh
 ```
 
-#### Install fisher
+### Install fisher
 
 ```bash
 curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
 ```
 
-#### Install fisher packages
+### Install fisher packages
 
 ```bash
 fisher add rafaelrinaldi/pure
