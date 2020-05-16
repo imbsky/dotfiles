@@ -11,6 +11,22 @@ git clone https://github.com/imbsky/dotfiles $HOME/src/github.com/imbsky/dotfile
 ```
 
 ```bash
+sudo apt install gpg software-properties-common
+sudo add-apt-repository ppa:martin-frost/thoughtbot-rcm
+sudo apt-add-repository ppa:fish-shell/release-3
+sudo apt update
+sudo apt install fish rcm
+chsh -s /usr/bin/fish
+```
+
+```bash
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf
+asdf plugin add direnv https://github.com/asdf-community/asdf-direnv.git
+asdf plugin add ghq https://github.com/kajisha/asdf-ghq.git
+asdf plugin add peco https://github.com/ryodocx/asdf-peco.git
+```
+
+```bash
 RCRC=$HOME/src/github.com/imbsky/dotfiles/rcrc rcup
 ```
 
