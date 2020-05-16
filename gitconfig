@@ -7,7 +7,6 @@ autocrlf=false
 eol=lf
 filemode = false
 fscache = true
-hooksPath = ~/src/github.com/imbsky/dotfiles/git-hooks
 ignorecase = false
 precomposeUnicode = true
 quotepath = false
