@@ -9,4 +9,4 @@ set -gx DIRENV_LOG_FORMAT
 set -gx PATH ~/.yarn/bin $PATH
 
 # opam
-source /home/konata/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
+source ~/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
