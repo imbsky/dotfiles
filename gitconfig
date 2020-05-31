@@ -8,8 +8,12 @@ eol=lf
 filemode = false
 fscache = true
 ignorecase = false
+pager = delta --theme base16
 precomposeUnicode = true
 quotepath = false
+
+[interactive]
+diffFilter = delta --color-only
 
 [protocol]
 version = 2
@@ -30,9 +34,6 @@ autosquash = true
 [alias]
 graph = log --graph --date-order --all --pretty=format:'%h %Cred%d %Cgreen%ad %Cblue%cn %Creset%s' --date=short
 ic = commit --allow-empty -m 'Initial commit'
-
-[url "git@github.com:"]
-insteadOf = https://github.com
 
 [ghq]
 root = ~/src
