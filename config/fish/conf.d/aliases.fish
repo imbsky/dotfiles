@@ -20,6 +20,3 @@ alias opamup 'opam update --all --upgrade --jobs=(getconf _NPROCESSORS_ONLN) --y
 # youtube-dl
 alias mp3dl 'youtube-dl -f mp3'
 alias mp4dl 'youtube-dl -f mp4'
-
-# Copy working directory
-alias cwd 'wslpath -w (pwd) | clip.exe'
