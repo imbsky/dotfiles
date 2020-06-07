@@ -1,4 +1,4 @@
-# Easier navigation: .., ..., ...., ....., ~ and -
+# Easier navigation: ..., ...., .....
 alias ... 'cd ../..'
 alias .... 'cd ../../..'
 alias ..... 'cd ../../../..'
