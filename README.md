@@ -1,13 +1,13 @@
 # dotfiles
 
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/imbsky/dotfiles/Main%20workflow?style=flat-square)](https://github.com/imbsky/dotfiles/actions)
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/smorimoto/dotfiles/Main%20workflow?style=flat-square)](https://github.com/smorimoto/dotfiles/actions)
 
 ## Installation instructions
 
 ### Base
 
 ```bash
-git clone git@github.com:imbsky/dotfiles.git $HOME/src/github.com/imbsky/dotfiles
+git clone git@github.com:smorimoto/dotfiles.git $HOME/src/github.com/smorimoto/dotfiles
 ```
 
 ```bash
@@ -21,7 +21,7 @@ asdf plugin add direnv https://github.com/asdf-community/asdf-direnv.git
 ```
 
 ```bash
-RCRC=$HOME/src/github.com/imbsky/dotfiles/rcrc rcup
+RCRC=$HOME/src/github.com/smorimoto/dotfiles/rcrc rcup
 ```
 
 ### Install fisher
