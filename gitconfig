@@ -33,7 +33,7 @@ autosquash = true
 
 [alias]
 graph = log --graph --date-order --all --pretty=format:'%h %Cred%d %Cgreen%ad %Cblue%cn %Creset%s' --date=short
-ic = commit --allow-empty -m 'Initial commit'
+ic = commit --allow-empty --signoff --message 'Initial commit'
 
 [ghq]
 root = ~/src
