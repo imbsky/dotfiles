@@ -17,8 +17,8 @@ smtpserverport = 587
 suppresscc = self
 
 [core]
-autocrlf=false
-eol=lf
+autocrlf = false
+eol = lf
 pager = delta --theme base16
 precomposeunicode = false
 trustctime = false
