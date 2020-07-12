@@ -37,3 +37,14 @@ fisher add rafaelrinaldi/pure
 fisher add decors/fish-ghq
 fisher add oh-my-fish/plugin-peco
 ```
+
+### Add .gitconfig.local
+
+```bash
+touch ~/.gitconfig.local
+```
+
+```conf
+[sendemail]
+smtpPass = <PASSWORD>
+```
