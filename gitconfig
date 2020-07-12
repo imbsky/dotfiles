@@ -1,3 +1,10 @@
+[alias]
+tags = tag -l
+branches = branch --all
+remotes = remote --verbose
+graph = log --graph --date-order --all --pretty=format:'%h %Cred%d %Cgreen%ad %Cblue%cn %Creset%s' --date=short
+ic = commit --allow-empty --signoff --message 'Initial commit'
+
 [user]
 email = sora@morimoto.io
 name = Sora Morimoto
@@ -5,12 +12,11 @@ name = Sora Morimoto
 [core]
 autocrlf=false
 eol=lf
-filemode = false
-fscache = true
-ignorecase = false
 pager = delta --theme base16
-precomposeUnicode = true
-quotepath = false
+precomposeunicode = false
+trustctime = false
+untrackedCache = true
+whitespace = space-before-tab,-indent-with-non-tab,trailing-space
 
 [interactive]
 diffFilter = delta --color-only
@@ -19,21 +25,26 @@ diffFilter = delta --color-only
 version = 2
 
 [color]
-branch = auto
-status = auto
+ui = auto
+
+[apply]
+whitespace = fix
 
 [push]
 default = simple
+followTags = true
 
 [pull]
 rebase = true
 
+[merge]
+log = true
+
 [rebase]
 autosquash = true
 
-[alias]
-graph = log --graph --date-order --all --pretty=format:'%h %Cred%d %Cgreen%ad %Cblue%cn %Creset%s' --date=short
-ic = commit --allow-empty --signoff --message 'Initial commit'
+[url "git@github.com:"]
+insteadOf = https://github.com
 
 [ghq]
 root = ~/src
