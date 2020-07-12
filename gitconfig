@@ -9,6 +9,13 @@ ic = commit --allow-empty --signoff --message 'Initial commit'
 email = sora@morimoto.io
 name = Sora Morimoto
 
+[sendemail]
+smtpuser = sora@morimoto.io
+smtpserver = smtp.fastmail.com
+smtpencryption = tls
+smtpserverport = 587
+suppresscc = self
+
 [core]
 autocrlf=false
 eol=lf
