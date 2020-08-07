@@ -5,7 +5,7 @@
   "profiles": {
     "defaults": {
       "colorScheme": "Base16",
-      "fontFace": "PragmataPro"
+      "fontFace": "JetBrains Mono"
     },
     "list": [
       {
