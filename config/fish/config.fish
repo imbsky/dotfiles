@@ -1,4 +1,5 @@
 # asdf version manager
+source ~/.asdf/asdf.fish
 set -gx PATH ~/.asdf/bin $PATH
 
 # direnv
