@@ -26,8 +26,7 @@ suppresscc = self
 fetchJobs = 48
 
 [core]
-autocrlf = false
-eol = lf
+autoCRLF = false
 pager = delta --theme base16
 precomposeunicode = false
 trustctime = false
