@@ -1,1 +1,1 @@
-source $(asdf which direnv_use_asdf)
+source "$(asdf direnv hook asdf)"
