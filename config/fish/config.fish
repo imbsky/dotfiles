@@ -1,6 +1,5 @@
 # asdf version manager
-set -gx PATH ~/.asdf/bin $PATH
-source ~/.asdf/lib/asdf.fish
+source ~/.asdf/asdf.fish
 
 # direnv
 asdf exec direnv hook fish | source
