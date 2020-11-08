@@ -1,0 +1,4 @@
+--ignore-directory=is:_build
+--ignore-directory=is:_opam
+--ignore-directory=is:dist
+--ignore-directory=is:node_modules
