@@ -8,15 +8,11 @@ alias rf 'rm -rf'
 alias cwd 'wslpath -w (pwd) | clip.exe'
 
 # yarn
-alias yarn 'env CHILD_CONCURRENCY=(getconf _NPROCESSORS_ONLN) NETWORK_CONCURRENCY=(getconf _NPROCESSORS_ONLN) yarn'
+alias yarn 'env CHILD_CONCURRENCY=(nproc) NETWORK_CONCURRENCY=(nproc) yarn'
 
 # bundler
-alias bi 'bundle install --path vendor/bundle --jobs=(getconf _NPROCESSORS_ONLN)'
+alias bi 'bundle install --path vendor/bundle --jobs=(nproc)'
 alias be 'bundle exec'
 
 # opam shortcut
-alias opamup 'opam update --all --upgrade --jobs=(getconf _NPROCESSORS_ONLN) --yes'
-
-# youtube-dl
-alias mp3dl 'youtube-dl -f mp3'
-alias mp4dl 'youtube-dl -f mp4'
+alias opamup 'opam update --all --upgrade --jobs=(nproc) --yes'
