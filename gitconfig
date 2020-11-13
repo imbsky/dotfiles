@@ -1,13 +1,6 @@
 [include]
 path = ~/.gitconfig.local
 
-[alias]
-tags = tag -l
-branches = branch --all
-remotes = remote --verbose
-graph = log --graph --date-order --all --pretty=format:'%h %Cred%d %Cgreen%ad %Cblue%cn %Creset%s' --date=short
-ic = commit --allow-empty --signoff --message 'Initial commit'
-
 [fetch]
 parallel = 48
 
@@ -61,8 +54,26 @@ log = true
 [rebase]
 autosquash = true
 
+[url "git@github.com:github"]
+insteadOf = https://github.com/github
+insteadOf = github:github
+insteadOf = git://github.com/github
+
 [url "git@github.com:"]
-insteadOf = https://github.com
+pushInsteadOf = https://github.com/
+pushInsteadOf = github:
+pushInsteadOf = git://github.com/
+
+[url "git://github.com/"]
+insteadOf = github:
+
+[url "git@gist.github.com:"]
+insteadOf = gst:
+pushInsteadOf = gist:
+pushInsteadOf = git://gist.github.com/
+
+[url "git://gist.github.com/"]
+insteadOf = "gist:"
 
 [ghq]
 root = ~/src
