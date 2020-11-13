@@ -12,8 +12,9 @@ abbr gpo 'git pull origin'
 abbr gr 'git reset --hard'
 abbr grh 'git reset HEAD^1'
 abbr grpo 'git remote prune origin'
-abbr gs 'git status -s'
+abbr gs 'git switch'
 abbr gsc 'git switch -c'
+abbr gss 'git status -s'
 abbr gt 'git tag -l'
 
 # youtube-dl
