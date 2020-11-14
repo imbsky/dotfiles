@@ -7,6 +7,7 @@ if status --is-interactive
   abbr -a -g gic 'git commit --allow-empty -sm "Initial commit"'
   abbr -a -g gpmb 'git branch --merged | grep -v master | xargs -P (nproc) git branch -D'
   abbr -a -g gr 'git reset --hard'
+  abbr -a -g gras 'git remote add smorimoto'
   abbr -a -g grh 'git reset HEAD^1'
   abbr -a -g gs 'git switch'
   abbr -a -g gsc 'git switch -c'
