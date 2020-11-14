@@ -11,7 +11,7 @@ git clone git@github.com:smorimoto/dotfiles.git $HOME/src/github.com/smorimoto/d
 ```
 
 ```bash
-sudo xbps-install -Sy fish-shell rcm ghq peco
+sudo xbps-install -Sy fish-shell starship rcm ghq peco
 chsh -s /usr/bin/fish
 ```
 
