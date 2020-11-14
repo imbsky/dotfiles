@@ -27,15 +27,14 @@ RCRC=$HOME/src/github.com/smorimoto/dotfiles/rcrc rcup
 ### Install fisher
 
 ```bash
-curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
+curl -sL git.io/fisher | source && fisher install jorgebucaran/fisher
 ```
 
 ### Install fisher packages
 
 ```bash
-fisher add rafaelrinaldi/pure
-fisher add decors/fish-ghq
-fisher add oh-my-fish/plugin-peco
+fisher install decors/fish-ghq
+fisher install oh-my-fish/plugin-peco
 ```
 
 ### Add .gitconfig.local
