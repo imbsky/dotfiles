@@ -3,3 +3,8 @@ function opampinall
     opam pin add $pkg.dev . --no-action --yes;
   end
 end
+
+function opamswitchcreatelocal
+  opam switch create . $argv[1] --no-install
+  opampinall
+end
