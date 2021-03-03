@@ -7,7 +7,10 @@
 ### Base
 
 ```bash
-sudo xbps-install -Suy bzip2-devel curl delta fish-shell gcc ghq gnupg jemalloc-devel libquadmath-devel libressl-devel libxml2-devel make ncurses-libtinfo-devel peco rcm readline-devel sqlite-devel starship wget zlib-devel
+sudo xbps-install -Suy bubblewrap bzip2-devel curl darcs delta fish-shell gcc \
+  ghq gnupg jemalloc-devel libquadmath-devel libressl-devel libxml2-devel m4 \
+  make mercurial ncurses-libtinfo-devel patch peco rcm readline-devel rsync \
+  sqlite-devel starship unzip wget zlib-devel
 chsh -s /usr/bin/fish
 git clone git@github.com:smorimoto/dotfiles.git $HOME/src/github.com/smorimoto/dotfiles
 RCRC=$HOME/src/github.com/smorimoto/dotfiles/rcrc rcup
