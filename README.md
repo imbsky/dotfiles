@@ -7,34 +7,17 @@
 ### Base
 
 ```bash
-git clone git@github.com:smorimoto/dotfiles.git $HOME/src/github.com/smorimoto/dotfiles
-```
-
-```bash
-sudo xbps-install -Sy fish-shell starship rcm ghq peco
+sudo xbps-install -Suy bzip2-devel curl delta fish-shell gcc ghq gnupg jemalloc-devel libquadmath-devel libressl-devel libxml2-devel make ncurses-libtinfo-devel peco rcm readline-devel sqlite-devel starship wget zlib-devel
 chsh -s /usr/bin/fish
-```
-
-```bash
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf
-asdf plugin add direnv https://github.com/asdf-community/asdf-direnv.git
-```
-
-```bash
+git clone git@github.com:smorimoto/dotfiles.git $HOME/src/github.com/smorimoto/dotfiles
 RCRC=$HOME/src/github.com/smorimoto/dotfiles/rcrc rcup
-```
-
-### Install fisher
-
-```bash
+git clone git@github.com:asdf-vm/asdf.git $HOME/.asdf
+bash -c '${ASDF_DATA_DIR:=$HOME/.asdf}/plugins/nodejs/bin/import-release-team-keyring'
+CFLAGS='-O2' PYTHON_CONFIGURE_OPTS='--enable-optimizations --with-lto' asdf install python <VERSION>
+CFLAGS='-O2' RUBY_CONFIGURE_OPTS='--with-jemalloc' asdf install ruby <VERSION>
+asdf install
 curl -sL git.io/fisher | source && fisher install jorgebucaran/fisher
-```
-
-### Install fisher packages
-
-```bash
-fisher install decors/fish-ghq
-fisher install oh-my-fish/plugin-peco
+fisher install decors/fish-ghq && fisher install oh-my-fish/plugin-peco
 ```
 
 ### Add .gitconfig.local
