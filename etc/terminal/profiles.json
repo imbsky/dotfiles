@@ -1,11 +1,11 @@
 {
   "$schema": "https://aka.ms/terminal-profiles-schema",
-  "defaultProfile": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+  "defaultProfile": "{342eaa22-06b2-5df7-b78e-a6046a4926db}",
   "copyOnSelect": false,
   "profiles": {
     "defaults": {
       "colorScheme": "Base16",
-      "fontFace": "JetBrains Mono"
+      "fontFace": "PragmataPro Mono"
     },
     "list": [
       {
@@ -22,16 +22,16 @@
       },
       {
         "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
-        "hidden": false,
         "name": "Azure Cloud Shell",
-        "source": "Windows.Terminal.Azure"
+        "source": "Windows.Terminal.Azure",
+        "hidden": true
       },
       {
-        "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+        "guid": "{342eaa22-06b2-5df7-b78e-a6046a4926db}",
         "hidden": false,
-        "name": "Ubuntu",
+        "name": "Void",
         "source": "Windows.Terminal.Wsl",
-        "commandline": "wsl.exe ~ -d Ubuntu"
+        "commandline": "wsl.exe ~ -d Void"
       }
     ]
   },
@@ -59,8 +59,20 @@
     }
   ],
   "keybindings": [
-    { "command": "find", "keys": "ctrl+shift+f" },
-    { "command": "paste", "keys": "ctrl+v" },
-    { "command": { "action": "copy", "singleLine": false }, "keys": "ctrl+c" }
+    {
+      "command": "find",
+      "keys": "ctrl+shift+f"
+    },
+    {
+      "command": "paste",
+      "keys": "ctrl+v"
+    },
+    {
+      "command": {
+        "action": "copy",
+        "singleLine": false
+      },
+      "keys": "ctrl+c"
+    }
   ]
 }

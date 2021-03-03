@@ -1,1 +1,1 @@
-set -x EDITOR nano
+set -x EDITOR code
