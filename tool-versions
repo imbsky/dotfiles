@@ -1,14 +1,14 @@
+golang 1.16.3
+nodejs 16.10.0
+opam 2.1.0-beta4
+python 3.9.4 2.7.18
+ruby 3.0.1
+zig 0.7.1
 awscli 2.2.1
 direnv 2.28.0
 dotnet-core 5.0.202
-golang 1.16.3
-nodejs 15.10.0
-opam 2.1.0-beta4
 poetry 1.1.6
 pulumi 3.1.0
-python 3.9.4 2.7.18
-ruby 3.0.1
 shellcheck 0.7.2
 shfmt 3.2.4
 yarn 1.22.10
-zig 0.7.1
