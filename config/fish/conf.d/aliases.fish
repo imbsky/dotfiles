@@ -18,5 +18,5 @@ alias be 'bundle exec'
 alias opamup 'opam update --all --upgrade --jobs=(nproc) --yes'
 
 # youtube-dl
-alias mp3dl "youtube-dl -f mp3 $1"
-alias mp4dl "youtube-dl -f mp4 $1"
+alias mp3dl "youtube-dl --format mp3 $1"
+alias mp4dl "youtube-dl --format bestvideo+bestaudio --merge-output-format mp4 $1"
